@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/FelizDiaAndalucia"
+        android:layout_width="214dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/textViewTitle"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="169dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/lyrics"
+        app:layout_constraintEnd_toEndOf="@+id/lyrics"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/lyrics"
+        app:layout_constraintTop_toBottomOf="@+id/FelizDiaAndalucia"
+        app:srcCompat="@drawable/bandera_de_andalucia_svg" />
+
+        <TextView
+            android:id="@+id/lyrics"
+            android:layout_width="355dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="20dp"
+            android:text="La bandera blanca y verde vuelve, tras siglos de guerra, a decir paz y esperanza, bajo el sol de nuestra tierra.La bandera blanca y verde vuelve, tras siglos de guerra, a decir paz y esperanza, bajo el sol de nuestra tierra.La bandera blanca y verde vuelve, tras siglos de guerra, a decir paz y esperanza, bajo el sol de nuestra tierra.La bandera blanca y verde vuelve, tras siglos de guerra, a decir paz y esperanza, bajo el sol de nuestra tierra."
+            app:layout_constraintBottom_toTopOf="@+id/sonarhimno_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <Button
+            android:id="@+id/sonarhimno_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="173dp"
+            android:layout_marginBottom="309dp"
+            android:text="Himno"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyrics" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
