@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/alumnado/Desktop/2DAM/2DAM/PSP/señales"
+relocations:     []
+...
