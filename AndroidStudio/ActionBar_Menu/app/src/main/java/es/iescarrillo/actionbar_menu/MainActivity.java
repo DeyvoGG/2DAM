@@ -1,9 +1,8 @@
-package es.iescarrillo.agenda;
+package es.iescarrillo.actionbar_menu;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +11,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    EditText fecha;
-    Button limpiar;
-    Button grabar;
-    Button buscar;
-    EditText multiLinea;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,21 +21,13 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
         });
-
-        limpiar = findViewById(R.id.limpiar);
-        fecha = findViewById(R.id.date);
-        multiLinea = findViewById(R.id.multiLineMain);
-        grabar = findViewById(R.id.grabar);
-
-
     }
-    public void limpiar(View v){
-        fecha.setText("");
-        multiLinea.setText("");
-    }
-    public void grabar(View v){
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }
