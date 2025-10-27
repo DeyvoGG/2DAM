@@ -2,7 +2,23 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Buscar" />
-    <item android:title="A cerca de" />
-    <item android:title="Prueba" />
+    <!-- Buscar: aparece si hay espacio -->
+    <item
+        android:id="@+id/buscarid"
+        android:title="Buscar"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="ifRoom" />
+
+    <!-- Acerca de: siempre visible -->
+    <item
+        android:id="@+id/acercadeid"
+        android:title="Acerca de"
+        android:icon="@android:drawable/ic_menu_info_details"
+        app:showAsAction="always" />
+
+    <!-- Prueba: se mantiene en el menú -->
+    <item
+        android:id="@+id/pruebaid"
+        android:title="Prueba"
+        app:showAsAction="never" />
 </menu>
