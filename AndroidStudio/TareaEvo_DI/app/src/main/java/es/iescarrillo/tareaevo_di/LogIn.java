@@ -19,7 +19,7 @@ public class LogIn extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-        // 👉 AHORA sí puedes usar findViewById
+
         login = findViewById(R.id.btnLogIn);
 
         // Navegar al MainActivity
