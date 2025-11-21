@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IShoppingList">
         <activity
+            android:name=".ActivityAnyadir"
+            android:exported="false" />
+        <activity
             android:name=".ActivityEditar"
             android:exported="false" />
         <activity

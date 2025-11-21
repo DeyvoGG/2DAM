@@ -2,9 +2,10 @@ package es.iescarrillo.ishoppinglist;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.ArrayAdapter;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -20,21 +21,24 @@ public class MainActivity extends AppCompatActivity {
 
     Button addProduct;
     Button addPending;
-    Spinner spinnerProducts;
     Button detalles;
+    Spinner spinnerProducts;
 
     ArrayList<Producto> productos;
     ArrayAdapter<Producto> adapter;
 
-    // Lanzador para recibir resultados de ActivityDetalles
-    private final ActivityResultLauncher<Intent> detalleLauncher =
+    // Lanzador para añadir un producto
+    private final ActivityResultLauncher<Intent> anyadirLauncher =
             registerForActivityResult(
                     new ActivityResultContracts.StartActivityForResult(),
                     result -> {
-                        // Aquí podemos refrescar la UI si se modificó algo en ActivityDetalles
-                        if (result.getResultCode() == RESULT_OK) {
-                            // Por ejemplo, volver a asignar el adaptador al spinner
-                            spinnerProducts.setAdapter(adapter);
+                        if(result.getResultCode() == RESULT_OK) {
+                            Producto productoNuevo = (Producto) result.getData().getSerializableExtra("productoNuevo");
+                            if(productoNuevo != null){
+                                productos.add(productoNuevo);
+                                adapter.notifyDataSetChanged(); // Refrescar Spinner
+                                spinnerProducts.setSelection(productos.size() - 1); // Seleccionar el nuevo producto
+                            }
                         }
                     }
             );
@@ -50,31 +54,37 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Referencias
+        // Inicializar referencias
         spinnerProducts = findViewById(R.id.spinnerProductos);
         addProduct = findViewById(R.id.addProd);
         addPending = findViewById(R.id.pendiente);
         detalles = findViewById(R.id.detalles);
 
-        // Lista de productos
+        // Lista de productos iniciales
         productos = new ArrayList<>();
         productos.add(new Producto("1", "Patata", "Patata de Cádiz", true));
         productos.add(new Producto("2", "Pimiento", "Unos pican y otros no", true));
         productos.add(new Producto("3", "Cebolla", "Lloras", false));
 
-        // Adaptador del spinner
+        // Adaptador del Spinner
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, productos);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerProducts.setAdapter(adapter);
 
-        // Botón detalles
+
+        // Botón Detalles
         detalles.setOnClickListener(v -> {
             Producto productoSeleccionado = (Producto) spinnerProducts.getSelectedItem();
-            if (productoSeleccionado != null) {
+            if(productoSeleccionado != null){
                 Intent intent = new Intent(MainActivity.this, ActivityDetalles.class);
                 intent.putExtra("producto", productoSeleccionado);
-                detalleLauncher.launch(intent); // Lanzamos ActivityDetalles
+                startActivity(intent);
             }
         });
     }
+    public void addProduct(View view) {
+        Intent intent = new Intent(this, ActivityAnyadir.class);
+        anyadirLauncher.launch(intent); // Lanzar usando el launcher
+    }
+
 }

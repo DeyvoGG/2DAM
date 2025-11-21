@@ -6,19 +6,35 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class ActivityDetalles extends AppCompatActivity {
-
+    Producto producto;
     Button volverInicio;
     Button editarPropiedades;
     TextView id;
     TextView nombre;
     TextView descripcion;
     TextView estado;
+    private final ActivityResultLauncher<Intent> editarLauncher =
+            registerForActivityResult(
+                    new ActivityResultContracts.StartActivityForResult(),
+                    result -> {
+                        if(result.getResultCode() == RESULT_OK){
+                            Producto productoEditado = (Producto) result.getData().getSerializableExtra("productoEditado");
+                            if(productoEditado != null){
+                                producto = productoEditado;
+                                actualizarTextViews(); // Actualizamos la UI
+                            }
+                        }
+                    }
+            );
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,10 +71,26 @@ public class ActivityDetalles extends AppCompatActivity {
             setResult(RESULT_OK);
             finish();
         });
-
-        // Botón para editar propiedades (pendiente implementar)
         editarPropiedades.setOnClickListener(v -> {
-            // Aquí puedes abrir un diálogo o nueva Activity para editar el producto
+            if (producto != null) {  // Usamos la variable producto ya inicializada
+                Intent intent = new Intent(ActivityDetalles.this, ActivityEditar.class);
+                intent.putExtra("producto", producto); // Pasamos el producto a ActivityEditar
+                editarLauncher.launch(intent); // Usamos ActivityResultLauncher si queremos recibir cambios
+            }
         });
+
+
+
+
     }
+    private void actualizarTextViews() {
+
+        if (producto != null) {
+            id.setText("ID: " + producto.getId());
+            nombre.setText("Nombre: " + producto.getNombreProducto());
+            descripcion.setText("Descripcion: " + producto.getInfoProducto());
+            estado.setText("Estado: " + (producto.getEstadoCompra() ? "Disponible" : "No disponible"));
+        }
+    }
+
 }

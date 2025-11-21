@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".RestrictiveDesing">
+
+    <!-- Imagen de perfil circular -->
+
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_user_placeholder"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_profile_circle"
+        android:padding="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"/>
+
+    <!-- Nombre de usuario -->
+
+    <ImageView
+        android:id="@+id/imageProfile2"
+        android:layout_width="44dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="328dp"
+        android:background="@drawable/bg_profile_circle"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_user_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="María Doblas Luque"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/imageProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Biografía -->
+
+    <TextView
+        android:id="@+id/textUsername2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="María Doblas Luque"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/imageProfile2"
+        tools:layout_editor_absoluteY="348dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textmg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="517 Me gusta"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="160dp" />
+
+    <TextView
+        android:id="@+id/textBio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Amante del diseño, los libros y los viajes 🌍✨"
+        android:textColor="#555555"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/textUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Botón Seguir -->
+    <Button
+        android:id="@+id/buttonFollow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#0095F6"
+        android:paddingHorizontal="10dp"
+        android:text="Seguir"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@id/buttonMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textBio" />
+
+    <!-- Botón Mensaje -->
+    <Button
+        android:id="@+id/buttonMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mensaje"
+        android:textAllCaps="false"
+        android:backgroundTint="#EFEFEF"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/textBio"
+        app:layout_constraintStart_toEndOf="@id/buttonFollow"
+        app:layout_constraintEnd_toStartOf="@id/buttonShare"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:paddingHorizontal="10dp"/>
+
+    <!-- Botón Compartir -->
+    <Button
+        android:id="@+id/buttonShare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0095F6"
+        android:textColor="#FFFFFF"
+        android:contentDescription="Compartir"
+        app:layout_constraintTop_toBottomOf="@id/textBio"
+        app:layout_constraintStart_toEndOf="@id/buttonMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="share"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="315dp"
+        android:layout_height="617dp"
+        android:rotation="-90"
+        app:srcCompat="@drawable/publicacion"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="227dp" />
+
+    <Button
+        android:id="@+id/btn_mg"
+        android:layout_width="59dp"
+        android:layout_height="35dp"
+        android:backgroundTint="#FB1908"
+        android:text="♡"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/textmg"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_comentario"
+        android:layout_width="59dp"
+        android:layout_height="35dp"
+        android:backgroundTint="#0095F6"
+        android:text="Ⓒ"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toEndOf="@+id/textmg"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.571"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="738dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="694dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="81dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
