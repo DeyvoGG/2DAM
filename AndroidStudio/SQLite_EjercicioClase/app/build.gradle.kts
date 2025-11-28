@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace = "es.iescarrillo.tareaevo_di"
+    namespace = "es.iescarrillo.sqlite_ejercicioclase"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "es.iescarrillo.tareaevo_di"
-        minSdk = 26
+        applicationId = "es.iescarrillo.sqlite_ejercicioclase"
+        minSdk = 24
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -40,8 +40,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.google.android.material:material:1.11.0")
-    // Navigation
-    implementation("androidx.navigation:navigation-fragment:2.7.7")
-    implementation("androidx.navigation:navigation-ui:2.7.7")
 }
