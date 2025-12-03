@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blueSky">#87CEEB</color>
+    <?xml version="1.0" encoding="utf-8"?>
+        <color name="background_white">#F5F5F5</color> <!-- Blanco con un ligero tono grisáceo -->
+        <color name="light_blue">#BFE3F0</color> <!-- Azul claro o cian pálido -->
+        <color name="medium_blue">#5BB4E7</color> <!-- Azul medio o celeste -->
+        <color name="dark_blue">#006290</color> <!-- Azul oscuro o azul marino -->
+
+</resources>
