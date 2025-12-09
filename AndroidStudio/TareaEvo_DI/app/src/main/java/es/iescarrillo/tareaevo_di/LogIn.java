@@ -26,7 +26,7 @@ public class LogIn extends AppCompatActivity {
         login.setOnClickListener(v -> {
             Intent intent = new Intent(LogIn.this, MainActivity.class);
             startActivity(intent);
-            finish(); 
+            finish();
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
