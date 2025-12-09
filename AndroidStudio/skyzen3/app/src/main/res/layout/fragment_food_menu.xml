@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Carnes -->
+    <ImageButton
+        android:id="@+id/btnCarne"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/carne"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnPescado"
+        app:layout_constraintBottom_toTopOf="@id/txtCarne"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/txtCarne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="Carnes"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btnCarne"
+        app:layout_constraintStart_toStartOf="@id/btnCarne"
+        app:layout_constraintEnd_toEndOf="@id/btnCarne"
+        app:layout_constraintBottom_toTopOf="@id/btnBebida"
+        android:layout_marginTop="8dp" />
+
+    <!-- Pescados -->
+    <ImageButton
+        android:id="@+id/btnPescado"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/pescado"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCarne"
+        app:layout_constraintBottom_toTopOf="@id/txtPescado" />
+
+    <TextView
+        android:id="@+id/txtPescado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="Pescados"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btnPescado"
+        app:layout_constraintStart_toStartOf="@id/btnPescado"
+        app:layout_constraintEnd_toEndOf="@id/btnPescado"
+        app:layout_constraintBottom_toTopOf="@id/btnPostre"
+        android:layout_marginTop="8dp" />
+
+    <!-- Bebidas -->
+    <ImageButton
+        android:id="@+id/btnBebida"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bebida"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/txtCarne"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnPostre"
+        app:layout_constraintBottom_toTopOf="@id/txtBebida" />
+
+    <TextView
+        android:id="@+id/txtBebida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="Bebidas"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btnBebida"
+        app:layout_constraintStart_toStartOf="@id/btnBebida"
+        app:layout_constraintEnd_toEndOf="@id/btnBebida"
+        app:layout_constraintBottom_toTopOf="@id/fabCart"
+        android:layout_marginTop="8dp" />
+
+    <!-- Postres -->
+    <ImageButton
+        android:id="@+id/btnPostre"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/postre"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/txtPescado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnBebida"
+        app:layout_constraintBottom_toTopOf="@id/txtPostre" />
+
+    <TextView
+        android:id="@+id/txtPostre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="Postres"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btnPostre"
+        app:layout_constraintStart_toStartOf="@id/btnPostre"
+        app:layout_constraintEnd_toEndOf="@id/btnPostre"
+        app:layout_constraintBottom_toTopOf="@id/fabCart"
+        android:layout_marginTop="8dp" />
+
+    <!-- Carrito (FAB) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_shopping_cart"
+        app:tint="@android:color/white"
+        app:backgroundTint="@color/dark_blue"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

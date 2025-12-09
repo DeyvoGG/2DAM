@@ -8,20 +8,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class SkyzenFragment extends Fragment {
+public class FoodMenuFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_skyzen, container, false);
+        return inflater.inflate(R.layout.fragment_food_menu, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Aquí va tu contenido (texto, botones, etc.)
-        // NO hay Toolbar ni BottomNavigationView en este fragment
+        // Aquí puedes añadir listeners si quieres (opcional por ahora)
+        // Ej: view.findViewById(R.id.btnCarne).setOnClickListener(...);
     }
 }

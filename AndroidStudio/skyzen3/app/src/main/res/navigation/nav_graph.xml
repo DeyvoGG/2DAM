@@ -10,4 +10,14 @@
         android:name="es.iescarrillo.skyzen.SkyzenFragment"
         android:label="Skyzen" />
 
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="es.iescarrillo.skyzen.MapFragment"
+        android:label="Mapa" />
+
+    <fragment
+        android:id="@+id/foodMenuFragment"
+        android:name="es.iescarrillo.skyzen.FoodMenuFragment"
+        android:label="Comida" />
+
 </navigation>

@@ -11,22 +11,23 @@
         android:roundIcon="@mipmap/ic_launcher_skyzen_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Skyzen">
+
         <activity
             android:name=".Login"
-            android:exported="true" >
-
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="false">
+            android:exported="false"></activity>
 
-        </activity>
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDXI1LlKmm9YN4tCZt6dI6DhtoodPsiYxg" />
     </application>
 
 </manifest>
