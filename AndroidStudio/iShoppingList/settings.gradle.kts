@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "iShoppingList"
 include(":app")
+ 

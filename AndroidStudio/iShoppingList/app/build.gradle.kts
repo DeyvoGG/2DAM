@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "es.iescarrillo.ishoppinglist"
-    compileSdk = 36
+    namespace = "com.example.ishoppinglist"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "es.iescarrillo.ishoppinglist"
+        applicationId = "com.example.ishoppinglist"
         minSdk = 26
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -26,8 +26,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 

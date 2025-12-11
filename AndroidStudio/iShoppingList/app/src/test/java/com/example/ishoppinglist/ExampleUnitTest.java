@@ -1,4 +1,4 @@
-package es.iescarrillo.ishoppinglist;
+package com.example.ishoppinglist;
 
 import org.junit.Test;
 

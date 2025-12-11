@@ -1,4 +1,4 @@
-package es.iescarrillo.ishoppinglist;
+package com.example.ishoppinglist;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("es.iescarrillo.ishoppinglist", appContext.getPackageName());
+        assertEquals("com.example.ishoppinglist", appContext.getPackageName());
     }
 }
