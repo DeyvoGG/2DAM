@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/skyzenFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/skyzenFragment"
-        android:name="es.iescarrillo.skyzen.SkyzenFragment"
-        android:label="Skyzen" />
+        android:id="@+id/homeFragment"
+        android:name="es.iescarrillo.skyzen.HomeFragment"
+        android:label="Inicio" />
 
     <fragment
         android:id="@+id/mapFragment"
@@ -19,5 +18,36 @@
         android:id="@+id/foodMenuFragment"
         android:name="es.iescarrillo.skyzen.FoodMenuFragment"
         android:label="Comida" />
+
+    <fragment
+        android:id="@+id/stewardessFragment"
+        android:name="es.iescarrillo.skyzen.StewardessFragment"
+        android:label="Azafata" />
+
+    <!-- Nuevos fragments de comida -->
+    <fragment
+        android:id="@+id/carnesFragment"
+        android:name="es.iescarrillo.skyzen.CarnesFragment"
+        android:label="Carnes" />
+
+    <fragment
+        android:id="@+id/bebidasFragment"
+        android:name="es.iescarrillo.skyzen.BebidasFragment"
+        android:label="Bebidas" />
+
+    <fragment
+        android:id="@+id/pescadosFragment"
+        android:name="es.iescarrillo.skyzen.PescadosFragment"
+        android:label="Pescados" />
+
+    <fragment
+        android:id="@+id/postresFragment"
+        android:name="es.iescarrillo.skyzen.PostresFragment"
+        android:label="Postres" />
+
+    <fragment
+        android:id="@+id/carritoFragment"
+        android:name="es.iescarrillo.skyzen.CarritoFragment"
+        android:label="Carrito" />
 
 </navigation>

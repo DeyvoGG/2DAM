@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="24dp">
+
+    <!-- Título principal -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Qué necesita?"
+        android:textSize="24sp"
+        android:textColor="#005A87"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Lista de opciones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <!-- Atención médica -->
+        <TextView
+            android:id="@+id/txtMedical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atención médica"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp" />
+
+        <!-- Malestar -->
+        <TextView
+            android:id="@+id/txtDiscomfort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Malestar"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp" />
+
+        <!-- Comida -->
+        <TextView
+            android:id="@+id/txtFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comida"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp" />
+
+        <!-- Limpieza y orden -->
+        <TextView
+            android:id="@+id/txtCleaning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limpieza y orden"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp" />
+
+        <!-- Información del vuelo -->
+        <TextView
+            android:id="@+id/txtFlightInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información del vuelo"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp" />
+
+        <!-- Otro -->
+        <TextView
+            android:id="@+id/txtOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Otro"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

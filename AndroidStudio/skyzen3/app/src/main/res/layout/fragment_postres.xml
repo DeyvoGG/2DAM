@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ======================================================== -->
+        <!-- >>> CAMBIO PRINCIPAL: AHORA USAMOS HorizontalScrollView <<< -->
+        <!-- Antes: LinearLayout horizontal con layout_weight -->
+        <!-- Ahora: HorizontalScrollView para evitar saltos de línea -->
+        <!-- ======================================================== -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:elevation="2dp">
+
+                <!-- >>> CAMBIO: layout_width="wrap_content" en lugar de "0dp" -->
+                <!-- >>> CAMBIO: eliminado layout_weight="1" -->
+                <!-- >>> CAMBIO: padding horizontal fijo para mejor apariencia -->
+                <TextView
+                    android:id="@+id/tabCarnes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carnes"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:background="@drawable/tab_unselected_bg"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:id="@+id/tabBebidas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bebidas"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:background="@drawable/tab_unselected_bg"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:id="@+id/tabPescados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pescados"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:background="@drawable/tab_unselected_bg"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:id="@+id/tabPostres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Postres"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:background="@drawable/tab_selected_bg"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tabCarrito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carrito"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:background="@drawable/tab_unselected_bg"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+        <!-- ======================================================== -->
+        <!-- >>> FIN DEL CAMBIO PRINCIPAL <<< -->
+        <!-- ======================================================== -->
+
+        <!-- Título de la sección -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipos de Postres:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#005A87"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Lista de productos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemTarta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tarta de Queso"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@color/dark_blue"
+                android:gravity="center"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:backgroundTint="@color/dark_blue" />
+
+            <TextView
+                android:id="@+id/itemHelado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Helado"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:background="@drawable/rounded_item_bg"
+                android:gravity="center"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/itemMousse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mousse de Chocolate"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:background="@drawable/rounded_item_bg"
+                android:gravity="center"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/itemFlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flan"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:background="@drawable/rounded_item_bg"
+                android:gravity="center"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/itemBrownie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brownie"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:background="@drawable/rounded_item_bg"
+                android:gravity="center"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/itemFruta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fruta Fresca"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:background="@drawable/rounded_item_bg"
+                android:gravity="center"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
