@@ -54,7 +54,7 @@ public class EditDetailActivity extends AppCompatActivity {
         if (edit != null) {
             nameEdit.setText(edit.getName());
             detailsEdit.setText(edit.getDescription());
-            // En tu lógica: Switch ON = "completado", así que:
+            // Switch ON = "completado", así que:
             sw2.setChecked(edit.isCompleted());
         }
 
