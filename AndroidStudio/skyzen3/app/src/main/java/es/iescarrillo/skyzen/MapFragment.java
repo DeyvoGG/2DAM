@@ -106,7 +106,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
             // Mover el marcador del avión
             planeMarker.setPosition(point);
 
-            // Opcional: rotar el avión (no con marcador por defecto, pero puedes usar un icono personalizado)
+            // Opcional: rotar el avión
         });
 
         animator.start();
