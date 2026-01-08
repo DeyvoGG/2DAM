@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nueva Categoría"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la categoría"
+        android:layout_marginBottom="16dp">
+        <EditText
+            android:id="@+id/etNombreCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción (opcional)"
+        android:layout_marginBottom="24dp">
+        <EditText
+            android:id="@+id/etDescripcionCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="3"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnGuardarCategoria"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Guardar Categoría"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

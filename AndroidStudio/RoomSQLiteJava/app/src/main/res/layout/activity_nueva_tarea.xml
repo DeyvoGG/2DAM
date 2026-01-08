@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nueva Tarea"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Título"
+            android:layout_marginBottom="16dp">
+            <EditText
+                android:id="@+id/etTituloTarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción"
+            android:layout_marginBottom="16dp">
+            <EditText
+                android:id="@+id/etDescripcionTarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="3"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha (AAAA-MM-DD)"
+            android:layout_marginBottom="16dp">
+            <EditText
+                android:id="@+id/etFechaTarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usuario asignado:"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+        <Spinner
+            android:id="@+id/spinnerUsuarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoría:"
+            android:layout_marginBottom="8dp"/>
+        <Spinner
+            android:id="@+id/spinnerCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"/>
+
+        <CheckBox
+            android:id="@+id/cbCompletada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marcar como completada"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnGuardarTarea"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Guardar Tarea"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</ScrollView>

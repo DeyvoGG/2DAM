@@ -12,7 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomSQLiteJava">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.ListaTareasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ListaCategoriasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ListaUsuariosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.NuevaTareaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CategoriaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.UsuarioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
